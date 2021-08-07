@@ -1,0 +1,12 @@
+{
+  "presets": [
+    "@babel/preset-env"
+  ],
+  "babelrcRoots": [
+    ".",
+    "./*"
+  ],
+  "ignore": [
+    "node_modules"
+  ]
+}

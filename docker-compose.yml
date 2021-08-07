@@ -1,0 +1,28 @@
+version: "3"
+services: 
+  frontend:
+    container_name: react-app
+    build: 
+      context: .
+    hostname: 
+      react-app
+    command: >
+      bash -c "yarn install && yarn start"
+    ports: 
+      - 3000:3000
+    volumes: 
+      - ./frontend:/app
+      - /app/node_modules
+  backend:
+    container_name: express-app
+    build: 
+      context: .
+    hostname: 
+      express-app
+    command: >
+      bash -c "npm i && npm start"
+    ports: 
+      - 6464:6464
+    volumes: 
+      - ./backend:/app
+      - /app/node_modules
